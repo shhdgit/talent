@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virtual Pet Dog - 溜溜</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: monospace;
+        margin: 0;
+      }
+      header,
+      footer {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+      }
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .dog {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .dog pre {
+        margin: 0;
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      button:hover {
+        background-color: #0056b3;
+      }
+      .message {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Virtual Pet Dog</h1>
+      <h2>バーチャルペット溜溜</h2>
+    </header>
+    <main>
+      <div class="dog">
+        <div>溜溜</div>
+        <pre>
+             ____
+            /    \__
+|\         /    @   \
+\ \_______|    \  .:|>
+ \      ##|    | \__/
+  |    ####\__/   \
+  /  /  ##       \|
+ /  /__________\  \
+ L_JJ           \__JJ
+            </pre
+        >
+      </div>
+      <div class="buttons">
+        <button onclick="petDog()">Pet Her</button>
+        <button onclick="feedDog()">Feed Her</button>
+      </div>
+      <div class="message" id="message"></div>
+    </main>
+    <footer>
+      <p>
+        Take care of your virtual pet, 溜溜! |
+        バーチャルペットの溜溜を大切にしてください!
+      </p>
+    </footer>
+    <script>
+      function petDog() {
+        document.getElementById("message").textContent =
+          "You petted the dog! 溜溜 looks happy!";
+      }
+
+      function feedDog() {
+        document.getElementById("message").textContent =
+          "You fed the dog! 溜溜 wags her tail!";
+      }
+    </script>
+  </body>
+</html>
